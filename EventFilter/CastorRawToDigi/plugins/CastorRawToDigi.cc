@@ -45,8 +45,8 @@ CastorRawToDigi::CastorRawToDigi(edm::ParameterSet const& conf):
   if (unpackTTP_)
     produces<HcalTTPDigiCollection>();
 
-  tok_input_ = consumes<FEDRawDataCollection>(dataTag_);
 
+  tok_input_ = consumes<FEDRawDataCollection>(dataTag_);
 }
 
 // Virtual destructor needed.
