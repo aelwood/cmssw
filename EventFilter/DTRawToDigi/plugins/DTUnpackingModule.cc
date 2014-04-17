@@ -64,6 +64,7 @@ DTUnpackingModule::DTUnpackingModule(const edm::ParameterSet& ps) : unpacker(0) 
     produces<DTDigiCollection>();
     produces<DTLocalTriggerCollection>();
   }
+  consumes<FEDRawDataCollection>(inputLabel);
 }
 
 DTUnpackingModule::~DTUnpackingModule(){
