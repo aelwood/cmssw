@@ -6,6 +6,7 @@ from HLTriggerOffline.SUSYBSM.SUSYBSM_MET_MUON_cff import *
 from HLTriggerOffline.SUSYBSM.SUSYBSM_inclusiveHT_aux350_cff import *
 from HLTriggerOffline.SUSYBSM.SUSYBSM_inclusiveHT_aux600_cff import *
 from HLTriggerOffline.SUSYBSM.SUSYBSM_alphaT_cff import *
+from HLTriggerOffline.SUSYBSM.SUSYBSM_caloHT_cff import *
 
 HLTSusyExoValSeq = cms.Sequence(SUSY_HLT_HT_MET +
                                 SUSY_HLT_InclusiveHT +
@@ -17,6 +18,11 @@ HLTSusyExoValSeq = cms.Sequence(SUSY_HLT_HT_MET +
                                 SUSY_HLT_HT300_alphaT0p53 +
                                 SUSY_HLT_HT350_alphaT0p52 +
                                 SUSY_HLT_HT400_alphaT0p51 +
+                                SUSY_HLT_CaloHT200+
+                                SUSY_HLT_CaloHT250+
+                                SUSY_HLT_CaloHT300+
+                                SUSY_HLT_CaloHT350+
+                                SUSY_HLT_CaloHT400+
                                 SUSY_HLT_InclusiveHT_aux350 + 
                                 SUSY_HLT_InclusiveHT_aux600)
 

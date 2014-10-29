@@ -33,6 +33,7 @@
 #include "DataFormats/HLTReco/interface/TriggerEventWithRefs.h"
 #include "HLTrigger/HLTcore/interface/HLTConfigProvider.h"
 
+#include "HLTriggerOffline/SUSYBSM/interface/AlphaT.h"
 
 
 
