@@ -35,13 +35,13 @@ process.source = cms.Source("PoolSource",
         #'file:///afs/cern.ch/user/a/aelwood/alphat/hlt/CMSSW_7_2_0/src/HLTTest/hltSkim.root'
 
         #TTBAR
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_10_1_mg0.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_2_1_JAw.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_3_1_OJ9.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_4_1_lnc.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_5_1_0sw.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_7_1_Ttp.root',
-        '/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_9_1_vwt.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_10_1_mg0.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_2_1_JAw.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_3_1_OJ9.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_4_1_lnc.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_5_1_0sw.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_7_1_Ttp.root',
+        #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_9_1_vwt.root',
 
         #DYJets
       # '/store/user/aelwood/141022_hltDqmTestSkim/DYJets/hltSkim_10_1_hP7.root',
@@ -73,6 +73,8 @@ process.source = cms.Source("PoolSource",
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_6_1_1vS.root',
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_8_1_mza.root',
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_9_1_PdV.root',
+        
+        'file:///afs/cern.ch/work/a/aelwood/alphat/trigger/hltSkimHt.root',
     )
 
 
@@ -90,15 +92,22 @@ process.out = cms.OutputModule("PoolOutputModule",
            'keep *_MEtoEDMConverter_*_*'
         ),
     #fileName = cms.untracked.string('output/ttbar.root'),
-    fileName = cms.untracked.string('output/qcd470to600.root'),
+    fileName = cms.untracked.string('output/htTest.root'),
     )
 
 
-process.HLTSusyExoValSeq = cms.Sequence( process.SUSY_HLT_HT200_alphaT0p57 
-         + process.SUSY_HLT_HT250_alphaT0p55 
-         + process.SUSY_HLT_HT300_alphaT0p53 
-         + process.SUSY_HLT_HT350_alphaT0p52 
-         + process.SUSY_HLT_HT400_alphaT0p51 
+process.HLTSusyExoValSeq = cms.Sequence( 
+       # process.SUSY_HLT_HT200_alphaT0p57 
+       #  + process.SUSY_HLT_HT250_alphaT0p55 
+       #  + process.SUSY_HLT_HT300_alphaT0p53 
+       #  + process.SUSY_HLT_HT350_alphaT0p52 
+       #  + process.SUSY_HLT_HT400_alphaT0p51 
+                        process.SUSY_HLT_CaloHT200 +
+                        process.SUSY_HLT_CaloHT250 +
+                        process.SUSY_HLT_CaloHT300 +
+                        process.SUSY_HLT_CaloHT350 +
+                        process.SUSY_HLT_CaloHT400 
+
         )
 #process.HLTSusyExoValSeq = cms.Sequence(process.SUSY_HLT_InclusiveHT_aux350 + process.SUSY_HLT_InclusiveHT_aux600)
 
