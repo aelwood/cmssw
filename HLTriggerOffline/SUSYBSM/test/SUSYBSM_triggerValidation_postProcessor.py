@@ -19,7 +19,7 @@ process.GlobalTag.globaltag = 'GR_R_52_V7::All'
 #process.GlobalTag.globaltag = 'GR10_P_V10::All'
 ## input file (adapt input file name correspondingly)
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring("file:output/htTest.root"),
+    fileNames = cms.untracked.vstring("file:output/htQcd.root"),
     #fileNames = cms.untracked.vstring("file:/tmp/pablom/OutputJason.root"),
     processingMode = cms.untracked.string('RunsAndLumis')
     )

@@ -43,6 +43,15 @@ process.source = cms.Source("PoolSource",
         #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_7_1_Ttp.root',
         #'/store/user/aelwood/141022_hltDqmTestSkim/TTBar/hltSkim_9_1_vwt.root',
 
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_10_1_3Cw.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_1_1_7kT.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_5_1_4B9.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_6_1_NIU.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_7_1_DFr.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_8_1_uCo.root',
+        # '/store/user/aelwood/141102_hltHtDqmTestSkim/TTBar/hltSkim_9_1_1ct.root',
+
+
         #DYJets
       # '/store/user/aelwood/141022_hltDqmTestSkim/DYJets/hltSkim_10_1_hP7.root',
       # '/store/user/aelwood/141022_hltDqmTestSkim/DYJets/hltSkim_1_1_i13.root',
@@ -73,8 +82,14 @@ process.source = cms.Source("PoolSource",
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_6_1_1vS.root',
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_8_1_mza.root',
         #'/store/user/aelwood/141022_hltDqmTestSkim/QCD170to300/hltSkim_9_1_PdV.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_10_1_SSF.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_4_1_Dms.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_5_1_lLr.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_6_1_KvA.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_7_1_xZ0.root',
+        '/store/user/aelwood/141102_hltHtDqmTestSkim/QCD170to300/hltSkim_8_1_Kvx.root',
         
-        'file:///afs/cern.ch/work/a/aelwood/alphat/trigger/hltSkimHt.root',
+      #  'file:///afs/cern.ch/work/a/aelwood/alphat/trigger/hltSkimHt.root',
     )
 
 
@@ -92,7 +107,7 @@ process.out = cms.OutputModule("PoolOutputModule",
            'keep *_MEtoEDMConverter_*_*'
         ),
     #fileName = cms.untracked.string('output/ttbar.root'),
-    fileName = cms.untracked.string('output/htTest.root'),
+    fileName = cms.untracked.string('output/htQcd.root'),
     )
 
 
