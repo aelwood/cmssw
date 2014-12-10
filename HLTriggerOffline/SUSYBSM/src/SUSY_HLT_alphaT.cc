@@ -159,14 +159,14 @@ void SUSY_HLT_alphaT::analyze(edm::Event const& e, edm::EventSetup const& eSetup
 
   //Fill the alphaT and HT histograms
   if(hltPfJets.size()>0){
-      double hltPfAlphaT = AlphaT(hltPfJets).value();
+      double hltPfAlphaT = AlphaT(hltPfJets,true).value();
       h_triggerPfAlphaT->Fill(hltPfAlphaT);
       h_triggerPfHt->Fill(hltPfHt);
       h_triggerPfAlphaT_triggerPfHt->Fill(hltPfHt, hltPfAlphaT);
   }
 
   if(hltCaloJets.size()>0){
-      double hltCaloAlphaT = AlphaT(hltCaloJets).value();
+      double hltCaloAlphaT = AlphaT(hltCaloJets,true).value();
       h_triggerCaloAlphaT->Fill(hltCaloAlphaT);
       h_triggerCaloHt->Fill(hltCaloHt);
       h_triggerCaloAlphaT_triggerCaloHt->Fill(hltCaloHt, hltCaloAlphaT);
